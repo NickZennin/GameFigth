@@ -1,52 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movimiento : MonoBehaviour 
-{
-	
+public class Control_2 : MonoBehaviour {
+
+	// Variables
 	public float Rotacion = 80f;
 	public float Move = 10f;
 
 	public Camera firstPerson;
 	public Camera OverHead;
-	//public Color color; 
 
 	// Use this for initialization
-	void Start () 
-	{
-		//GetComponent<Renderer>().material.color = color;
-	}
-	
-	// Update is called once per frame
-	void Update ()	
-	{
-		Rotate ();
-		Movet ();
+	void Start () {
+
 	}
 
-	/*public void ShowCam() {
-		if (Input.GetKey (KeyCode.Q))
+	// Update is called once per frame
+	void Update () {
+		Rotate ();
+		Movet ();
+		ShowCam();
+	}
+	public void ShowCam() {
+		if (Input.GetKey (KeyCode.F3)) {
 			firstPerson.enabled = false;
-		else if (Input.GetKey (KeyCode.E))
 			OverHead.enabled = true;
-	}*/
+		} else if (Input.GetKey (KeyCode.F4)) {
+			firstPerson.enabled = true;
+			OverHead.enabled = false;
+		}
+	}
 
 
 	void Rotate () {
-		if (Input.GetKey(KeyCode.A))
+		if (Input.GetKey(KeyCode.LeftArrow))
 			transform.Rotate (new Vector3 (0f, -Rotacion, 0f) * Time.deltaTime);
-		else if (Input.GetKey(KeyCode.D))
+		else if (Input.GetKey(KeyCode.RightArrow))
 			transform.Rotate (new Vector3 (0f, Rotacion, 0f) * Time.deltaTime);
 	}
 
 	void Movet () {
-		if (Input.GetKey (KeyCode.W))
+		if (Input.GetKey (KeyCode.UpArrow))
 			transform.Translate (Vector3.forward * Move * Time.deltaTime);
-		else if (Input.GetKey (KeyCode.S))
+		else if (Input.GetKey (KeyCode.DownArrow))
 			transform.Translate (Vector3.back * Move * Time.deltaTime);
-		else if (Input.GetKey (KeyCode.Q))
+		else if (Input.GetKey (KeyCode.RightShift))
 			transform.Translate (Vector3.left * Move * Time.deltaTime);
-		else if (Input.GetKey (KeyCode.E))
+		else if (Input.GetKey (KeyCode.Alpha1))
 			transform.Translate (Vector3.right * Move * Time.deltaTime);
 	}
 }
