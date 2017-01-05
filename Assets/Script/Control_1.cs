@@ -8,7 +8,8 @@ public class Control_1 : MonoBehaviour {
 
 	public Camera firstPerson;
 	public Camera OverHead;
-	//public Color color; 
+
+	private int Count = 0;
 
 	// Use this for initialization
 	void Start () 
@@ -21,20 +22,26 @@ public class Control_1 : MonoBehaviour {
 	{
 		Rotate ();
 		Movet ();
-		ShowCam();
-	}
-
-	public void ShowCam() {
-		if (Input.GetKey (KeyCode.F2)) {
-			firstPerson.enabled = false;
-			OverHead.enabled = true;
-		} else if (Input.GetKey (KeyCode.F1)) {
-			firstPerson.enabled = true;
-			OverHead.enabled = false;
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			ShowCam();
 		}
 	}
 
+	// Cambio de camara
+	public void ShowCam() {
+		if (Count % 2 == 0) {
+			firstPerson.enabled = false;
+			OverHead.enabled = true;
+			Count++;
+		} else if (Count % 2 != 0) {
+			firstPerson.enabled = true;
+			OverHead.enabled = false;
+			Count++;
+		}
+	}
 
+	// Rotacion del objeto
 	void Rotate () {
 		if (Input.GetKey(KeyCode.A))
 			transform.Rotate (new Vector3 (0f, -Rotacion, 0f) * Time.deltaTime);
@@ -42,6 +49,7 @@ public class Control_1 : MonoBehaviour {
 			transform.Rotate (new Vector3 (0f, Rotacion, 0f) * Time.deltaTime);
 	}
 
+	// Movimiento del objeto
 	void Movet () {
 		if (Input.GetKey (KeyCode.W))
 			transform.Translate (Vector3.forward * Move * Time.deltaTime);
