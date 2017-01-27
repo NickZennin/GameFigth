@@ -40,3 +40,11 @@ C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEditor.xml
 C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.UI.xml
 C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.Networking.xml
 C:\Users\User\Documents\GitHub\GameFigth\obj\Debug\Assembly-CSharp.pdb
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.PlaymodeTestsRunner.dll
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.VR.dll
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.PlaymodeTestsRunner.xml
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\User\Documents\GitHub\GameFigth\Temp\bin\Debug\UnityEngine.VR.xml

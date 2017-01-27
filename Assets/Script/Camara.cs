@@ -4,22 +4,22 @@ using System.Collections;
 public class Camara : MonoBehaviour {
 
 	//Camaras
-	public Camara Menu;
-	public Camara Instruccions;
+	public GameObject player;
+
+	private Vector3 offset;
 
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		//OnClick ();
+		offset = transform.position - player.transform.position;
 	}
 
-	// Cambio de camara
-	public void OnClick(){
-		Menu.enabled = false;
-		Instruccions.enabled = true;
+	void LateUpdate() {
+		transform.position = player.transform.position + offset;
 	}
+
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
 }
