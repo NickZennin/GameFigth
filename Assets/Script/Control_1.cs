@@ -7,6 +7,10 @@ public class Control_1 : MonoBehaviour {
 
 	public float speed= 500f;
 
+	//Camara
+	public GameObject camara;
+	private Vector3 offset;
+
 	//private int Count = 0;
 
 	// Use this for initialization
